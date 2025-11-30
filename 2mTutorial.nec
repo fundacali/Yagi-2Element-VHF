@@ -1,0 +1,19 @@
+CM two meter dipole for tutorial purposes
+CE
+SY DELen=0.988669	'length of dipole
+SY RSpace=0.25	'spacing between reflector and driven
+SY RLen=1.1
+SY Height=2.5
+SY Segs=19
+GW	1	Segs	0	0	-(DELen/2)	0	0	(DELen/2)	#4
+GW	2	Segs	0	-Rspace	-(RLen/2)	0	-RSpace	(RLen/2)	#4
+GM	0	0	0	0	0	0	0	Height	1
+GE	1
+LD	5	1	1	Segs	58000000
+LD	5	2	1	Segs	58000000
+
+GN	2	0	0	0	13	0.005
+EK
+EX	0	1	10	0	0	0	0	0
+FR	0	0	0	0	146	0
+EN
